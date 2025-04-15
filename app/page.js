@@ -1,103 +1,178 @@
+import ProjectCard from "./components/ProjectCard";
+import ContactSection from "./components/ContactSection";
 import Image from "next/image";
+
+const projects = [
+  {
+    title: "Báaxal",
+    description: "Una adaptacion del clásico juego del Pacman pero inspirado en la cultura maya. Desarrollado en HTML, CSS y JavaScript.",
+    image: "/Baaxal.png",
+    link: "https://baaxal.netlify.app/"
+  },
+  {
+    title: "Cronometro",
+    description: "Una tipica pagina para usar ideal para tomar tiempos.",
+    image: "/Cronometro.png",
+    link: "https://poetic-kleicha-164973.netlify.app/"
+  },
+  {
+    title: "Hora",
+    description: "Página con la informacion del día y hora actual en tiempo real.",
+    image: "/Hora.png",
+    link: "https://harmonious-pithivier-ae387f.netlify.app/"
+  },
+  {
+    title: "LUZU!",
+    description: "Proyecto de pagina web mejorada para el canal de streaming LuzuTV!",
+    image: "/Luzu.png",
+    link: "https://luzu-flame.vercel.app/"
+  },
+  {
+    title: "Landing Page - Manicura",
+    description: "Base simple para landing page con especializacion en belleza",
+    image: "/Manicura.png",
+    link: "https://proyect25.vercel.app/"
+  },
+  {
+    title: "Clima - Ciudades",
+    description: "Pagina para buscar el clima actual y el pronostico de las ciudades del mundo. Desarrollado en Next.js",
+    image: "/ClimaCiudades.png",
+    link: "https://cities-one-sepia.vercel.app/"
+  },
+  {
+    title: "Landing Page - Negocio",
+    description: "Base de landing page para negocio.",
+    image: "/Negocio.png",
+    link: "https://spectacular-kulfi-cbf470.netlify.app/"
+  },
+  {
+    title: "Text",
+    description: "Editor de texto online con funciones basicas.",
+    image: "/Text.png",
+    link: "https://sebatext.netlify.app/"
+  },
+  {
+    title: "Temporizador",
+    description: "Un temporizador online para tener controlado el tiempo.",
+    image: "/Temporizador.png",
+    link: "https://66c384a6388c850077526085--splendorous-mandazi-57b6a3.netlify.app/"
+  },
+  {
+    title: "Snake",
+    description: "Una adaptacion del clasico juego de la vivorita.",
+    image: "/Snake.png",
+    link: "https://magical-halva-6fee12.netlify.app/"
+  },
+  {
+    title: "Calculadora",
+    description: "Version web de una calculadora con las funciones basicas.",
+    image: "/Calculadora.png",
+    link: "https://cheerful-rolypoly-301687.netlify.app/"
+  },
+  {
+    title: "Ahorcado",
+    description: "El famoso juego del ahorcado en version web.",
+    image: "/Ahorcado.png",
+    link: "https://zippy-biscuit-7f931b.netlify.app/"
+  },
+  {
+    title: "Cifrado",
+    description: "Pagina web para cifrar texto.",
+    image: "/Cifrado.png",
+    link: "https://subtle-bublanina-6b65c1.netlify.app/"
+  },
+  {
+    title: "ClimaX",
+    description: "Pagina web para ver el clima en tiempo real en la ubicacion actual.",
+    image: "/Clima.png",
+    link: "https://climax-arg.netlify.app/"
+  },
+  {
+    title: "LisTodo",
+    description: "Clasica pagina web para llevar el control de las tareas diarias.",
+    image: "/LisTodo.png",
+    link: "https://timely-croquembouche-3caa01.netlify.app/"
+  },
+  {
+    title: "Ruleta",
+    description: "Una especie de ruleta de paises aleatoreos.",
+    image: "/Ruleta.png",
+    link: "https://fastidious-moxie-6d4ba5.netlify.app/"
+  },
+  {
+    title: "Inventario",
+    description: "Pagina web para llevar el control de inventario.",
+    image: "/Inventario.png",
+    link: "https://terma-administrador.netlify.app/"
+  },
+  {
+    title: "Turismo",
+    description: "Pagina web para ofrecer paquetes de turismo.",
+    image: "/Turismo.png",
+    link: "https://grand-griffin-9a4dba.netlify.app/"
+  },
+  {
+    title: "Turnos",
+    description: "Pagina web para manejar turnos.",
+    image: "/Turnos.png",
+    link: "https://teal-swan-5868d8.netlify.app/"
+  }
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen text-neutral-900">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Header */}
+      <header className="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-10">
+        <div className="flex items-center gap-2">
+          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <nav className="space-x-6 text-sm font-medium">
+          <a href="#sobre" className="hover:text-blue-600">Sobre</a>
+          <a href="#trabajos" className="hover:text-blue-600">Trabajos</a>
+          <a href="#contacto" className="hover:text-blue-600">Contacto</a>
+        </nav>
+      </header>
+
+      {/* Sección: Sobre la empresa */}
+      <section id="sobre" className="text-center max-w-4xl mx-auto px-4 py-20">
+        <h1 className="text-5xl font-extrabold mb-6">Sitios web con identidad profesional</h1>
+        <p className="text-lg text-gray-800">
+        Soy desarrollador web y estudiante en la Universidad ORT Argentina, con un fuerte compromiso en la creación de soluciones digitales que representen fielmente la identidad y objetivos de cada cliente.
+
+Me especializo en el diseño y desarrollo de sitios web personalizados, orientados a potenciar tanto la imagen como la funcionalidad de negocios y emprendimientos. Trabajo con tecnologías modernas y aplico un enfoque centrado en el detalle, la eficiencia y la experiencia del usuario, para garantizar una presencia digital profesional, sólida y efectiva.</p>
+      </section>
+
+      {/* Sección: Trabajos */}
+      <section id="trabajos" className="px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-12 text-center text-gray-800">Trabajos</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sección: Contacto */}
+      <section id="contacto" className="px-4 py-24">
+        <ContactSection />
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-neutral-900 text-white text-sm py-8 text-center">
+        <p>&copy; {new Date().getFullYear()} SebDev Studio. Todos los derechos reservados.</p>
+        <p className="mt-2">
+          <a href="https://github.com/sebaezeq" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            GitHub
+          </a>
+        </p>
+        <Image src="/logo.png" alt="Logo" width={50} height={50} />
       </footer>
-    </div>
+
+    </main>
   );
 }
