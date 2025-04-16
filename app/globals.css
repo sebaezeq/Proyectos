@@ -26,5 +26,24 @@ body {
   color:#222222
 }
 
+body {
+  background-image: url('/logo.png'); /* Ruta del logo */
+  background-size: cover; /* Esto cubre toda el área */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al fondo */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  backdrop-filter: blur(15px); /* Aplicamos el desenfoque */
+}
 
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Overlay oscuro */
+  z-index: -1; /* Asegura que esté por detrás del contenido */
+}
 

@@ -138,17 +138,74 @@ export default function Home() {
 
       {/* Sección: Sobre la empresa */}
       <section id="sobre" className="text-center max-w-4xl mx-auto px-4 py-20">
-        <h1 className="text-5xl font-extrabold mb-6">Sitios web con identidad profesional</h1>
-        <p className="text-lg text-gray-800">
-        Soy desarrollador web y estudiante en la Universidad ORT Argentina, con un fuerte compromiso en la creación de soluciones digitales que representen fielmente la identidad y objetivos de cada cliente.
+      <h1
+  className="text-5xl font-extrabold mb-6 text-[#0673fe]"
+  style={{ textShadow: "2px 2px 4px rgba(0, 0, 2, 0.3)" }}
+>
+  Sitios web con identidad profesional
+</h1>
 
-Me especializo en el diseño y desarrollo de sitios web personalizados, orientados a potenciar tanto la imagen como la funcionalidad de negocios y emprendimientos. Trabajo con tecnologías modernas y aplico un enfoque centrado en el detalle, la eficiencia y la experiencia del usuario, para garantizar una presencia digital profesional, sólida y efectiva.</p>
+<p
+  className="text-lg flex flex-wrap"
+  style={{
+    color: "#fff",
+    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)", // sombra más fuerte por defecto
+  }}
+>
+  {`Soy desarrollador web y estudiante en la Universidad ORT Argentina, con un fuerte compromiso en la creación de soluciones digitales que representen fielmente la identidad y objetivos de cada cliente.
+
+  Me especializo en el diseño y desarrollo de sitios web personalizados, orientados a potenciar tanto la imagen como la funcionalidad de negocios y emprendimientos. Trabajo con tecnologías modernas y aplico un enfoque centrado en el detalle, la eficiencia y la experiencia del usuario, para garantizar una presencia digital profesional, sólida y efectiva.`.split(' ').map((word, index) => (
+    <span
+      key={index}
+      className="relative group transition-all duration-200 mx-[1.5px]"
+      style={{
+        position: 'relative',
+        display: 'inline-block',
+        padding: '2px 4px',
+        borderRadius: '4px',
+      }}
+    >
+      <span
+        className="absolute inset-0 rounded group-hover:opacity-100 transition-opacity duration-200"
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          opacity: 0,
+        }}
+      />
+      <span
+        className="relative z-10 group-hover:text-[#0673fe]"
+        style={{
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+        }}
+      >
+        {word}
+      </span>{" "}
+    </span>
+  ))}
+</p>
+
+
+
+
       </section>
 
       {/* Sección: Trabajos */}
       <section id="trabajos" className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-12 text-center text-gray-800">Trabajos</h2>
+        <h2
+  className="text-3xl font-semibold mb-12 text-center"
+  style={{
+    color: "#0673fe",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Fondo oscuro con transparencia
+    padding: "5px", // Opcional: agrega algo de espacio alrededor del texto
+    borderRadius: "15px", // Opcional: para bordes redondeados
+  }}
+>
+  Trabajos
+</h2>
+
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
