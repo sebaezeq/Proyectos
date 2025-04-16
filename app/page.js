@@ -126,7 +126,7 @@ export default function Home() {
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-10">
         <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/Logo.png" alt="Logo" width={50} height={50} />
           
         </div>
         <nav className="space-x-6 text-sm font-medium">
