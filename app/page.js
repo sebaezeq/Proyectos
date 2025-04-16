@@ -170,7 +170,7 @@ Me especializo en el diseño y desarrollo de sitios web personalizados, orientad
             GitHub
           </a>
         </p>
-        <Image src="/logo.png" alt="Logo" width={50} height={50} />
+        <Image src="/Logo.png" alt="Logo" width={50} height={50} />
       </footer>
 
     </main>
